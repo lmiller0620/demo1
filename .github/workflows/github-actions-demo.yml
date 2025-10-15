@@ -1,9 +1,8 @@
 name: GitHub Actions Demo
 on:
   push:
-    branches:
-    - main
-    - release/*
+    branches: [main]
+    paths-ignore: [.github/**]
     
   pull_request:
     branches:
@@ -13,7 +12,14 @@ on:
   - cron: "15 6 * * 0"
 
 jobs:
-  my_job:
-    name: my tst job 
+  build: 
     runs-on: ubuntu-latest
-
+    steps:
+      -run:
+        echo: "The job was triggered by event ${{ github.event_name }}"
+      -uses: actions/checkout@v3.0.2
+      -name: listfiles
+        -run:
+            echo: "repository ${{ github.repository }} contains: "  
+        
+      
