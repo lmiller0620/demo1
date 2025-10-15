@@ -10,6 +10,7 @@ on:
     
   schedule:
   - cron: "15 6 * * 0"
+  workflow dispatch:
 
 jobs:
   build: 
@@ -19,7 +20,7 @@ jobs:
         echo: "The job was triggered by event ${{ github.event_name }}"
       -uses: actions/checkout@v3.0.2
       -name: listfiles
-        -run:
+       run:
             echo: "repository ${{ github.repository }} contains: "  
         
       
