@@ -1,5 +1,5 @@
 # GitHub Actions Fundamentals
-test: lmm change 3
+test: lmm change 4
 Repo for the `GitHub Actions Fundamentals` training.
 
 ## 👉 Objectives
