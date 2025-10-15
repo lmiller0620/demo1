@@ -19,8 +19,9 @@ jobs:
       -run:
         echo: "The job was triggered by event ${{ github.event_name }}"
       -uses: actions/checkout@v3.0.2
-      -name: listfiles
-       run:
-            echo: "repository ${{ github.repository }} contains: "  
+      -name: list files in directory
+      run: 
+        echo: "repository ${{ github.repository }} contains: "  
+
         
       
